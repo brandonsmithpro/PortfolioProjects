@@ -28,7 +28,7 @@ WHERE continent IS NOT NULL
 ORDER BY location, date
 
 
---Likelihood of dying from contracying Covid in the USA
+--Likelihood of dying from contracting Covid in the USA
 
 SELECT location, date, total_cases, total_deaths, (total_deaths/total_cases)*100 AS death_percentage
 FROM PortfolioProject.CovidDeaths
@@ -36,7 +36,7 @@ WHERE location = 'United States'
 ORDER BY location, date
 
 
---Shows what percentage of population infected with Covid
+--Shows what percentage of population infected with Covid in USA
 
 SELECT location, date, total_cases, population, CAST((total_cases/population) as decimal)*100 AS infected_percentage
 FROM PortfolioProject.CovidDeaths
